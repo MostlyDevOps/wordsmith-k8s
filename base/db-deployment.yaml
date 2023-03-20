@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+  labels:
+    app: db
+spec:
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+        - name: db
+          image: postgres:15
+          ports:
+            - containerPort: 5432
+              name: db
+          volumeMounts:
+            - name: db-schema
+              mountPath: /docker-entrypoint-initdb.d
+          env:
+            - name: POSTGRES_HOST_AUTH_METHOD
+              value: trust
+      volumes:
+        - name: db-schema
+          configMap:
+            name: db-schema
