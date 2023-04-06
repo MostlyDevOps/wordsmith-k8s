@@ -1,14 +1,15 @@
----
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-bases:
-  - ../../base
 images:
-  - name: bretfisher/wordsmith-api
-    newTag: latest
-  - name: bretfisher/wordsmith-web
-    newTag: latest
+- name: bretfisher/wordsmith-api
+  newTag: latest
+- name: bretfisher/wordsmith-web
+  newTag: latest
+- name: ghcr.io/bretfisher/docker-build-workflow
+  newTag: gha-4625772381
 configMapGenerator:
-  - name: db-schema
-    files:
-      - words.sql
+- files:
+  - words.sql
+  name: db-schema
+resources:
+- ../../base
