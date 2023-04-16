@@ -5,9 +5,3 @@ images:
   newTag: latest
 - name: ghcr.io/mostlydevops/wordsmith-web-stable
   newTag: latest
-configMapGenerator:
-- files:
-  - words.sql
-  name: db-schema
-resources:
-- ../../base
