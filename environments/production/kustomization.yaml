@@ -4,4 +4,4 @@ images:
 - name: ghcr.io/mostlydevops/wordsmith-api-stable
   newTag: latest
 - name: ghcr.io/mostlydevops/wordsmith-web-stable
-  newTag: latest
+  newTag: 20230416-d9f32a1
