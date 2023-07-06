@@ -11,3 +11,4 @@ configMapGenerator:
   name: db-schema
 resources:
 - ../../base
+- ./web-ingress.yaml
