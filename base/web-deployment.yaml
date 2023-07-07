@@ -17,7 +17,7 @@ spec:
       containers:
         - name: web
           # FIXME:<your-org/repo:tag>
-          image: ghcr.io/uffizzicloud/wordsmith-web
+          image: bretfisher/wordsmith-web
           imagePullPolicy: Always
           ports:
             - containerPort: 80
