@@ -12,7 +12,9 @@ spec:
       - path: environments/*
   template:
     metadata:
-      name: '{{path.basename}}'
+      name: 'wordsmith-{{path.basename}}'
+      labels:
+        ApplicationSet: wordsmith-k8s.yaml
       finalizers:
         - resources-finalizer.argocd.argoproj.io
     spec:
@@ -23,7 +25,7 @@ spec:
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
-        namespace: wordsmith-'{{path.basename}}'
+        namespace: 'wordsmith-{{path.basename}}'
       syncPolicy:
         automated:
           prune: true
