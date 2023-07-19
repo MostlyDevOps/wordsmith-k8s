@@ -6,7 +6,8 @@ metadata:
   name: root
   namespace: argocd
   labels:
-    path: argocd-bootstrap/root.yaml
+    filename: root.yaml
+    dir: argocd-bootstrap
 spec:
   destination:
     namespace: argocd
