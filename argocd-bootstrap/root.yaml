@@ -5,6 +5,8 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
   name: root
   namespace: argocd
+  labels:
+    path: argocd-bootstrap/root.yaml
 spec:
   destination:
     namespace: argocd
