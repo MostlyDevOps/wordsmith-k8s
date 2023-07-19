@@ -3,10 +3,10 @@ kind: Kustomization
 images:
 - name: bretfisher/wordsmith-web
   newName: ghcr.io/mostlydevops/wordsmith-web
-  newTag: stable-20230714-fc211cb
+  newTag: 20230422-6c275d1
 - name: bretfisher/wordsmith-api
   newName: ghcr.io/mostlydevops/wordsmith-api
-  newTag: stable-20230714-8c5f603
+  newTag: 20230422-896efd5
 configMapGenerator:
 - files:
   - words.sql
